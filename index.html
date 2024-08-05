@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOKO KAIN ASFIFA ADI PRATAMA</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .header,
+      .footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .header img {
+        width: 100px;
+        height: auto;
+      }
+      .nav {
+        display: flex;
+        justify-content: center;
+        background-color: #e74c3c;
+        padding: 10px 0;
+      }
+      .nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+      }
+      .nav a:hover {
+        text-decoration: underline;
+      }
+      .sidebar {
+        float: left;
+        width: 20%;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .content {
+        float: left;
+        width: 75%;
+        padding: 20px;
+      }
+      .clear {
+        clear: both;
+      }
+      .catalog {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .catalog-item {
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        width: calc(30% - 20px);
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.1s;
+        text-align: center;
+      }
+      .catalog-item img {
+        width: 100%;
+        height: auto;
+      }
+      .catalog-item h4 {
+        margin: 10px 0;
+        padding: 0 10px;
+        font-size: 1em;
+        color: #333;
+      }
+      .catalog-item p {
+        font-size: 16px;
+        color: #555;
+      }
+      .catalog-item button {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 10px 0;
+      }
+      .catalog-item button:hover {
+        background-color: #2980b9;
+      }
+      @media (max-width: 1024px) {
+        .catalog-item {
+          width: calc(45% - 20px);
+        }
+      }
+      @media (max-width: 768px) {
+        .catalog-item {
+          width: calc(100% - 20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="asset/logo utama.jpg" alt="Asfifa Adi Pratama Logo" />
+      <h1>Toko Kain Asfifa Adi Pratama</h1>
+      <p>Jl. Raya Cibeber, Cilaku Kaum, Cilaku (Seberang Alfamart)</p>
+      <p>CILAKU, KAB. CIANJUR, JAWA BARAT, ID 43285</p>
+    </div>
+    <div class="nav">
+      <a href="homeback.html">Home</a>
+      <a href="order.html">Order</a>
+      <a href="contactkami.html">Contact Us</a>
+    </div>
+    <div class="sidebar">
+      <h3 align="center">MENU</h3>
+      <ul>
+        <li><a href="registrasi.html" target="_blank">Registrasi</a></li>
+        <li><a href="order.html" target="_blank">Form Pembelian</a></li>
+        <li><a href="contactkami.html" target="_blank">Hubungi Kami</a></li>
+        <li><a href="biodata.html" target="_blank">Biodata</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <header class="container">
+        <h1>Katalog Kain</h1>
+        <div class="cart">
+          Keranjang Belanja: <span id="cart-count">0</span> item
+        </div>
+      </header>
+      <main class="container">
+        <div class="catalog">
+          <div class="catalog-item">
+            <a href="kainbsy.html">
+              <img src="asset/kainbsy.jpg" alt="Kain Bsy" />
+              <h4>Kain Bsy</h4>
+              <p>Rp. 21.500/meter</p>
+              <button onclick="addToCart()">Klik disini lebih detail</button>
+            </a>
+          </div>
+          <div class="catalog-item">
+            <a href="kaincrinkle.html">
+              <img src="asset/kaincrinkle.jpg" alt="Kain Crinkle" />
+              <h4>Kain Crinkle</h4>
+              <p>Rp. 25.000/meter</p>
+              <button onclick="addToCart()">Klik disini lebih detail</button>
+            </a>
+          </div>
+          <div class="catalog-item">
+            <a href="kainlinen.html">
+              <img src="asset/kainlinen.jpg" alt="Kain Linen" />
+              <h4>Kain Linen</h4>
+              <p>Rp. 30.000/meter</p>
+              <button onclick="addToCart()">Klik disini lebih detail</button>
+            </a>
+          </div>
+          <div class="catalog-item">
+            <a href="kainmadinah.html">
+              <img src="asset/kainmadinah.jpg" alt="Kain Madinah" />
+              <h4>Kain Madinah</h4>
+              <p>Rp. 28.000/meter</p>
+              <button onclick="addToCart()">Klik disini lebih detail</button>
+            </a>
+          </div>
+          <div class="catalog-item">
+            <a href="kainshimer.html">
+              <img src="asset/kainshimer.jpg" alt="Kain Shimer" />
+              <h4>Kain Shimer</h4>
+              <p>Rp. 22.500/meter</p>
+              <button onclick="addToCart()">Klik disini lebih detail</button>
+            </a>
+          </div>
+          <div class="catalog-item">
+            <a href="kaintoyobo.html">
+              <img src="asset/kaintoyobo.jpg" alt="Kain Toyobo" />
+              <h4>Kain Toyobo</h4>
+              <p>Rp. 27.000/meter</p>
+              <button onclick="addToCart()">Klik disini lebih detail</button>
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="clear"></div>
+    <div class="footer">
+      <p>&copy; 2024 Toko Kain Asfira Adi Pratama. All rights reserved.</p>
+    </div>
+    <script>
+      function addToCart() {
+        var cartCountElement = document.getElementById("cart-count");
+        var cartCount = parseInt(cartCountElement.textContent);
+        cartCount += 1;
+        cartCountElement.textContent = cartCount;
+        alert("Kain berhasil ditambahkan ke keranjang!");
+      }
+    </script>
+  </body>
+</html>
